@@ -8,7 +8,7 @@
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
-    --text-primary: #002642;
+    --primary: #002642;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -73,7 +73,7 @@ button:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-[var(--text-primary)] dark:text-slate-100;
+  @apply text-[var(--primary)] dark:text-slate-100 ;
 }
 *{
   @apply border-gray-100;

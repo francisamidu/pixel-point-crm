@@ -1,6 +1,6 @@
 "use client";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Search } from "lucide-react";
+import { Search, Slash } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import {
   Breadcrumb,
@@ -33,15 +33,25 @@ export default function Header() {
         <div>
           <Breadcrumb>
             <BreadcrumbList>
-              <BreadcrumbItem>
+              <BreadcrumbItem
+                className={`${
+                  page?.name !== "dashboard" ? "text-gray-400" : ""
+                }`}
+              >
                 <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
               </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink href={page?.name}>
-                  {page?.name === "dashboard" ? "Home" : page?.label}
-                </BreadcrumbLink>
-              </BreadcrumbItem>
+              {page?.name !== "dashboard" && (
+                <>
+                  <BreadcrumbSeparator>
+                    <span className="text-gray-400 h-2">/</span>
+                  </BreadcrumbSeparator>
+                  <BreadcrumbItem className="text-slate-800">
+                    <BreadcrumbLink href={page?.name}>
+                      {page?.label}
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                </>
+              )}
             </BreadcrumbList>
           </Breadcrumb>
         </div>
