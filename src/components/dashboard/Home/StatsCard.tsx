@@ -45,7 +45,7 @@ export const StatsCard: React.FC<StatsCardProps> = ({
           <div className="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">
             {label}
           </div>
-          <div className="text-3xl font-bold text-[#181A20] dark:text-white tracking-tight">
+          <div className="text-3xl font-bold text-(color:--text-primary) dark:text-white tracking-tight">
             {value}
           </div>
         </div>

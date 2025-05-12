@@ -1,5 +1,20 @@
 "use client";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+} from "@radix-ui/react-dropdown-menu";
+import {
+  ChevronDownIcon,
+  Flame,
+  PlusCircle,
+  ThumbsUp,
+  Eye,
+} from "lucide-react";
 import React from "react";
+import { Button } from "@/components/ui/button";
 import {
   LineChart,
   Line,
@@ -8,8 +23,8 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Legend,
 } from "recharts";
+import { DatePickerWithRange } from "@/components/ui/date-range-picker";
 
 const data = [
   { month: "January", Impressions: 120, Followers: 80 },
@@ -62,13 +77,38 @@ const GrowthOverviewChart = () => {
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <button className="text-xs text-gray-500 border px-2 py-1 rounded-md bg-gray-50 hover:bg-gray-100">
-            Filters
-          </button>
-          <span className="text-xs text-gray-500">1 Jan - 31 Dec 2024</span>
-          <button className="text-xs text-gray-500 border px-2 py-1 rounded-md bg-gray-50 hover:bg-gray-100">
-            Refresh
-          </button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                className="flex flex-row items-center outline-slate-500 text-slate-700"
+                variant="outline"
+              >
+                Popular
+                <ChevronDownIcon className="inline-flex ml-1 mt-1" size={18} />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56 border-none text-slate-700 bg-white z-30">
+              <DropdownMenuGroup>
+                <DropdownMenuItem className="text-slate-600 hover:cursor-pointer flex items-center p-2 hover:bg-gray-50 border-0 outline-0 ring-0">
+                  <Flame className="mr-2 h-4 w-4" />
+                  <span>Trending</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="text-slate-600 hover:cursor-pointer flex items-center p-2 hover:bg-gray-50 border-0 outline-0 ring-0">
+                  <PlusCircle className="mr-2 h-4 w-4" />
+                  <span>New Entries</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="text-slate-600 hover:cursor-pointer flex items-center p-2 hover:bg-gray-50 border-0 outline-0 ring-0">
+                  <ThumbsUp className="mr-2 h-4 w-4" />
+                  <span>Most Liked</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="text-slate-600 hover:cursor-pointer flex items-center p-2 hover:bg-gray-50 border-0 outline-0 ring-0">
+                  <Eye className="mr-2 h-4 w-4" />
+                  <span>Most Viewed</span>
+                </DropdownMenuItem>
+              </DropdownMenuGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <DatePickerWithRange />
         </div>
       </div>
       <ResponsiveContainer width="100%" height={260}>

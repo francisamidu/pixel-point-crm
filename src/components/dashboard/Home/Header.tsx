@@ -10,20 +10,37 @@ import {
   BreadcrumbSeparator,
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
+import { usePathname } from "next/navigation";
+import { useMemo } from "react";
+import { useMenuContext } from "@/contexts/MenuContext";
 
 export default function Header() {
+  const pathname = usePathname();
+  const currentPageName = pathname.split("/").pop();
+
+  const { menuItems } = useMenuContext();
+
+  const page = useMemo(() => {
+    const currentPage = menuItems
+      .flatMap((section) => section.items)
+      .find((item) => item.name === currentPageName);
+    return currentPage || null;
+  }, [pathname]);
+
   return (
-    <div className="flex items-center justify-between border-b border-gray-100 dark:border-gray-700 px-3 py-2 rounded-t-lg sticky top-0 left-0 w-full z-50 bg-white dark:bg-gray-900">
+    <div className="flex items-center justify-between border-b border-gray-100 dark:border-gray-700 px-6 py-2 rounded-t-lg sticky top-0 left-0 w-full z-50 bg-white dark:bg-gray-900">
       <div className="flex items-center justify-between gap-4 w-full">
         <div>
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem>
-                <BreadcrumbLink href="/">Dashboard</BreadcrumbLink>
+                <BreadcrumbLink href="/dashboard">Dashboard</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                <BreadcrumbLink href={page?.name}>
+                  {page?.name === "dashboard" ? "Home" : page?.label}
+                </BreadcrumbLink>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
