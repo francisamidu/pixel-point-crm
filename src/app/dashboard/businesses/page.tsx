@@ -37,7 +37,7 @@ import {
   Trash2,
 } from "lucide-react";
 import { format } from "date-fns";
-import BusinessDetails from "@/components/dashboard/Business/BusinessDetails";
+import BusinessDetails from "@/components/dashboard/business/business-details";
 
 // Sample data
 const businesses = [
