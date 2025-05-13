@@ -61,7 +61,7 @@ const initialMenuItems: MenuItem[] = [
       {
         active: false,
         name: "support-tickets",
-        label: "Support",
+        label: "Support Tickets",
         icon: HelpCircle,
       },
     ],

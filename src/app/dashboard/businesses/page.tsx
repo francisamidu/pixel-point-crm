@@ -322,7 +322,7 @@ const BusinessManagement = () => {
         <div className="overflow-x-auto">
           <Table>
             <TableHeader>
-              <TableRow className="uppercase text-xs text-gray-400 bg-gray-100">
+              <TableRow className="uppercase text-xs !text-gray-500 bg-gray-100">
                 <TableHead className="w-[40px]">
                   <Checkbox
                     checked={
