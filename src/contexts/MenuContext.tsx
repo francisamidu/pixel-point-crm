@@ -71,8 +71,8 @@ const initialMenuItems: MenuItem[] = [
     items: [
       {
         active: false,
-        name: "communication",
-        label: "Communication",
+        name: "messaging",
+        label: "Messaging",
         icon: MessageSquare,
       },
       { active: false, name: "analytics", label: "Analytics", icon: BarChart2 },
