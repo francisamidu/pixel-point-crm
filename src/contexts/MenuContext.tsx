@@ -107,7 +107,7 @@ const initialMenuItems: MenuItem[] = [
       {
         active: false,
         name: "admin-settings",
-        label: "Admin & Settings",
+        label: "Administration",
         icon: Settings,
       },
     ],
