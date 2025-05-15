@@ -82,12 +82,12 @@ const initialMenuItems: MenuItem[] = [
         label: "Documents & Billing",
         icon: FileText,
       },
-      {
-        active: false,
-        name: "data-export",
-        label: "Data Export / Import",
-        icon: Download,
-      },
+      // {
+      //   active: false,
+      //   name: "data-export",
+      //   label: "Data Export / Import",
+      //   icon: Download,
+      // },
     ],
   },
   {
