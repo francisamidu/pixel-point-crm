@@ -61,7 +61,11 @@ export default function Sidebar() {
         <div className="h-8 w-8 rounded-md bg-indigo-600 flex items-center justify-center">
           <span className="text-white font-semibold">PP</span>
         </div>
-        <span className="font-semibold text-gray-800 dark:text-gray-200">
+        <span
+          aria-label="Pixel Point CRM"
+          role="heading"
+          className="font-semibold text-gray-800 dark:text-gray-200"
+        >
           Pixel Point CRM
         </span>
       </div>
