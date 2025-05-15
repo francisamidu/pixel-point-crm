@@ -63,7 +63,7 @@ export const TemplateCreator = () => {
           onChange={(e) => setTemplateContent(e.target.value)}
         />
         <p className="text-xs text-gray-500">
-          Use {{ variable_name }} syntax to add variables. Example: Hello {{ name }}!
+          Use {'{{ variable_name }}'} syntax to add variables. Example: Hello {'{{ name }}'}!
         </p>
       </div>
 

@@ -1,8 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const LandingPage = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/dashboard");
+  }, [3000]);
   return (
     <div className="min-h-screen bg-gradient-to-r from-indigo-600 to-blue-600">
       <div className="container mx-auto p-4">

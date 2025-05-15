@@ -2,6 +2,7 @@ import type React from "react"
 import type { TooltipProps } from "recharts"
 
 export interface ChartTooltipProps extends Omit<TooltipProps<any, any>, "formatter" | "labelFormatter"> {
+  
   formatter?: (value: number, name: string, index: number, payload: any[]) => React.ReactNode
   labelFormatter?: (label: string, payload: any[]) => React.ReactNode
 }
