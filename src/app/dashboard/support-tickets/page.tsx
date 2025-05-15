@@ -556,7 +556,7 @@ const TicketTracking = () => {
       {/* Tickets table */}
       <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[1200px] text-sm text-left">
+          <table className="w-full min-w-[1400px] text-sm text-left">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50">
               <tr>
                 <th className="px-4 py-3">Ticket ID</th>

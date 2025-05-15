@@ -13,6 +13,8 @@ import {
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { useMenuContext } from "@/contexts/MenuContext";
+import { alerts, notifications } from "@/shared/notifications-data";
+import { NotificationBell } from "./notification-bell";
 
 export default function Header() {
   const pathname = usePathname();
@@ -62,6 +64,7 @@ export default function Header() {
             placeholder="Search..."
             className="pl-8 w-[250px] bg-gray-100 dark:bg-gray-800 !outline-none !ring-0 !border-0"
           />
+          <NotificationBell notifications={notifications} alerts={alerts} />
           <ModeToggle />
         </div>
       </div>
