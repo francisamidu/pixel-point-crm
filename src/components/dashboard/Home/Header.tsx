@@ -1,6 +1,6 @@
 "use client";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Search, Slash } from "lucide-react";
+import { Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import {
   Breadcrumb,
@@ -8,7 +8,6 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-  BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";

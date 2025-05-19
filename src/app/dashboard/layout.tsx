@@ -1,4 +1,4 @@
-import Header from "@/components/dashboard/home/Header";
+import Header from "@/components/dashboard/home/header";
 import Sidebar from "@/components/sidebar";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
