@@ -9,7 +9,7 @@ const Dashboard = () => {
       <div className="flex flex-col gap-1 mb-6">
         <h1 className="text-lg font-semibold">Overview</h1>
         <h2 className="text-sm !text-gray-500">
-          Get an overview of your business performance
+          Get a quick overview of your business performance
         </h2>
       </div>
       <div className="w-full flex justify-center gap-3 ">
