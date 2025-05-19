@@ -1,7 +1,7 @@
-import StatsCard from "@/components/dashboard/home/stats-card";
+import StatsCard from "../../components/dashboard/home/stats-card";
 import React from "react";
 import { FileText, Users } from "lucide-react";
-import GrowthOverviewChart from "@/components/dashboard/home/growth-overview-chart";
+import GrowthOverviewChart from "../../components/dashboard/home/growth-overview-chart";
 
 const Dashboard = () => {
   return (
